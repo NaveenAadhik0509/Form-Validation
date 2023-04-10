@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+.container-fluid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    
+   background-image: url(/img/background-contact-form-1536x778.jpg);
+
+
+}
+.box{
+    
+    padding: 50px 10px;
+     /* background-image: url(/img/form-background-js.jpg); */
+}
+label{
+    line-height: 50px;
+    color: rgb(231, 199, 157);
+}
+input{
+    float: right;
+    margin-top: 15px;
+}
+.r1{
+    float: right;
+}
+.r2{
+    margin-top: 15px;
+    width: 10%;
+    height: 15px;
+}
+.tc{
+    width: 10%;
+    height: 15px;
+    margin-top: 10px;
+}
+.btn{
+    background-color: brown;
+    color: beige;
+    border: none;
+    padding: 8px 8px;
+    border-radius: 4px;
+}
+.btn:hover{
+    background-color: chocolate;
+    color: black;
+}
+@keyframes lisa {
+    form{
+    background-image: url(/img/background-contact-form-1536x778.jpg);
+    }
+    to{
+      background-image: url(/img/Amazing-Background-For-Free.webp);
+    }
+}
+.container-fluid{
+    animation-name: lisa;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}

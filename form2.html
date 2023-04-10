@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="/form2.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- <div class="car"></div> -->
+        <div class="container">
+            <div class="box">
+            <h1> <b>REGISTRATION FORM</b> </h1>
+           
+                <div class="form control">
+                    <label for="">Name</label>
+                    <input type="text" id="name" placeholder="username">
+                    <P id="a1" style="color:rgb(83, 12, 12) ;"></P>
+                </div>
+                <div class="form control">
+                    <label for="">Phone Number</label>
+                    <input type="number" id="phonenumber" placeholder="phone number">
+                    <P id="b1" style="color:rgb(83, 12, 12) ;"></P>
+                </div>
+                <div class="form control">
+                    <label for="">Address</label>
+                    <input type="text" id="address" placeholder="address">
+                    <p id="c1" style="color: rgb(83, 12, 12);"></p>
+                </div>
+                <div class="form control">
+                    <label for="">City</label>
+                    <input type="text" id="address1" placeholder="city">
+                    <p id="c2" style="color: rgb(83, 12, 12);"></p>
+                </div>
+                <div class="form control">
+                    <label for="">State</label>
+                    <input type="text" id="address2" placeholder="state">
+                    <p id="c3" style="color: rgb(83, 12, 12);"></p>
+                </div>
+                <div class="form control">
+                    <label for="">Gender</label>
+                    <input type="radio" id="gender1" class="r2">
+                    <label for="radio" class="r1">Female</label>
+                    <input type="radio" id="gender2" class="r2">
+                    <label for="radio" class="r1">Male</label>  
+                    <p id="x1" style="color: rgb(83, 12, 12);" ></p>
+                </div>
+                <div class="form control">
+                    <label for="">Date</label>
+                    <input type="date" id="date" >
+                    <p id="m1" style="color: rgb(83, 12, 12); "></p>
+                </div>
+                <div class="form control">
+                    <label for="">Email</label>
+                    <input type="text" id="email" placeholder="MailID">
+                    <p id="e2" style="color: rgb(83, 12, 12); "></p>
+                </div>
+                <div class="form control">
+                    <label for="">Password</label>
+                    <input type="password" id="password" placeholder="password">
+                    <p id="lo1" style="color:rgb(83, 12, 12) ;"></p>
+                </div>
+                <div class="form control">
+                    <label for="">Conform password</label>
+                    <input type="password" id="conformpassword" placeholder="conform password">
+                    <p id="lo2" style="color:rgb(83, 12, 12) ;"></p>
+                </div>
+                <div class="form control">
+                    <input type="checkbox" id="termsc" class="tc">
+                    <label for="">terms&conditions</label>
+                    <p id="v1" style="color: rgb(83, 12, 12);"></p>
+                </div>
+               <div class="form-control">
+                <input type="submit" id="submit" class="btn" onclick="funz()">
+               </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    function funz(){
+      let x=false;
+        let n=document.getElementById("name").value
+        let p = /^[a-zA-Z]+$/
+        if(n==""){
+    document.getElementById("a1").innerHTML="enter the name"
+        }else if (!p.test(n)){
+            document.getElementById("a1").innerHTML="enter the valid name"
+        }else{
+            document.getElementById("a1").innerHTML=""
+            y=true;
+        }
+ //=================================================================================================
+        let c=document.getElementById("phonenumber").value
+        let v =/^\d{10}$/
+        if(c==""){
+    document.getElementById("b1").innerHTML="enter phone number"
+        }else if (!v.test(c)){
+            document.getElementById("b1").innerHTML="enter the valid number"
+        }else{
+            document.getElementById("b1").innerHTML=""
+            y1=true;
+        }
+
+        //================================================================================
+        let j=document.getElementById("address").value
+        let l = /^[a-zA-Z0-9\s\,\''\-]*$/
+        if(j==""){
+    document.getElementById("c1").innerHTML="enter the address"
+        }else if (!l.test(j)){
+            document.getElementById("c1").innerHTML="enter the valid address"
+        }else{
+            document.getElementById("c1").innerHTML=""
+            y2=true;
+        }
+
+        //=========================================================================================
+        let j1=document.getElementById("address1").value
+        let l1 = /^[a-zA-Z\s\,\''\-]*$/
+        if(j1==""){
+    document.getElementById("c2").innerHTML="enter the city"
+        }else if (!l1.test(j1)){
+            document.getElementById("c2").innerHTML="enter the valid city"
+        }else{
+            document.getElementById("c2").innerHTML=""
+            y3=true;
+        }
+
+ //================================================================================================
+
+
+ let j2=document.getElementById("address2").value
+        let l2 = /^[a-zA-Z\s\,\''\-]*$/
+        if(j2==""){
+    document.getElementById("c3").innerHTML="enter the state"
+        }else if (!l2.test(j2)){
+            document.getElementById("c3").innerHTML="enter the valid state"
+        }else{
+            document.getElementById("c3").innerHTML=""
+            y4=true;
+        }
+
+//========================================================================================
+
+let male=document.getElementById("gender2").checked
+    let female=document.getElementById("gender1").checked
+    if(male||female){
+        document.getElementById("x1").innerHTML=""
+        y5=true;
+    }else{
+        document.getElementById("x1").innerHTML="please select"   
+    }
+//=======================================================================================================
+let m2=document.getElementById("date").value
+if(m2==""){
+    document.getElementById("m1").innerHTML="please enter the date"
+}
+else{
+    document.getElementById("m1").innerHTML=""
+    y6=true;
+}
+//======================================================================================
+
+let n1=document.getElementById("email").value
+        let k1 =/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
+        if(n1==""){
+    document.getElementById("e2").innerHTML="enter the mail"
+        }else if (!k1.test(n1)){
+            document.getElementById("e2").innerHTML="enter the valid mail"
+        }else{
+            document.getElementById("e2").innerHTML=""
+            y7=true;
+        }
+
+
+//==========================================================================================
+let h1=document.getElementById("password").value
+        let w1 =/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/
+        if(h1==""){
+    document.getElementById("lo1").innerHTML="enter the password"
+        }else if (!w1.test(h1)){
+            document.getElementById("lo1").innerHTML="enter the valid password"
+        }else{
+            document.getElementById("lo1").innerHTML=""
+            y8=true;
+        }
+//====================================================================================
+let h2=document.getElementById("conformpassword").value
+        // let w2 =/^[A-Za-z]\w{7,14}$/
+        if(h2==""){
+    document.getElementById("lo2").innerHTML="enter the conform password"
+        }else if (h1!==h2){
+            document.getElementById("lo2").innerHTML="enter the valid password"
+        }else{
+            document.getElementById("lo2").innerHTML=""
+            y9=true;
+        }
+//================================================================================
+        let m=document.getElementById("termsc").checked
+if(m){
+    document.getElementById("v1").innerHTML=""
+    y10=true;
+}
+else{
+    document.getElementById("v1").innerHTML="Please agree the condition"
+}
+ 
+if(y&&y1&&y2&&y3&&y4&&y5&&y6&&y7&&y8&&y9&&y10){
+    alert("form is sumbitted sucessfully.")
+}
+
+
+}
+    
+</script>
+</body>
+</html>
+<!-- Zdghhh@*1234js -->
